@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <style>
+        .list {
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 8px 15px;
+            color: rgb(114, 11, 11);
+            background-color: beige;
+            margin: 5px 5px;
+            font-weight: bold;
+        }
+        .list:hover {
+            background-color: cadetblue;
+
+        }
+        .chilll {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px 20px;
+        }
+
+        .jack {
+            background-color: rgb(17, 207, 207);
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="jack">
+        <div class="jaamm" style="display: flex;justify-content: center;align-items: center; color:darkorange;">
+            <table>
+                <tr>
+                    <th>Fruits</th>
+                    <th>Count of fruits</th>
+
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td id="appleCount">0</td>
+
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td id="bananaCount">0</td>
+
+                </tr>
+                <tr>
+                    <td>Mango</td>
+                    <td id="mangoCount">0</td>
+                </tr>
+                <tr>
+                    <td>total</td>
+                    <td id="totalCount">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="chilll">
+            <div>
+                <button class="list" id="Apple"> Apple</button>
+                <button class="list" id="Banana"> Banana</button>
+                <button class="list" id="Mango"> Mango </button>
+            </div>
+            <div>
+                <button class="list" id="delete1"> Delete</button>
+                <button class="list" id="delete2"> Delete</button>
+                <button class="list" id="delete3"> Delete</button>
+            </div>
+            <div>
+                <button class="list" id="Clear1"> Clear All</button>
+                <button class="list" id="Clear2"> Clear All</button>
+                <button class="list" id="Clear3"> Clear All</button>
+            </div>
+        </div>
+        <div class="chilll">
+            <button class="list" id="Addall"> Add All Fruits</button>
+        </div>
+    </section>
+    <script>
+        var apple = 0;
+        document.getElementById("Apple").addEventListener('click', () => {
+            apple++;
+            document.getElementById('appleCount').innerText = apple;
+            Apple
+        })
+
+        var banana = 0;
+        document.getElementById("Banana").addEventListener('click', () => {
+
+            banana++;
+            document.getElementById('bananaCount').innerText = banana;
+        }
+        )
+        var mango = 0;
+        document.getElementById("Mango").addEventListener('click', () => {
+            mango++;
+            document.getElementById('mangoCount').innerText = mango;
+        }
+        )
+
+        document.getElementById("Addall").addEventListener('click', () => {
+            // totalCount++;
+            document.getElementById('totalCount').innerText = mango + apple + banana;
+        })
+
+        // var mango = 0;
+        document.getElementById("delete3").addEventListener('click', () => {
+            mango--;
+            document.getElementById('mangoCount').innerText = mango;
+        }
+        )
+        document.getElementById("delete2").addEventListener('click', () => {
+            banana--;
+            document.getElementById('bananaCount').innerText = banana;
+        }
+        )
+        document.getElementById("delete1").addEventListener('click', () => {
+            apple--;
+
+            document.getElementById('appleCount').innerText = apple;
+        }
+        )
+        document.getElementById("Clear1").addEventListener('click', () => {
+            apple = 0;
+            document.getElementById('appleCount').innerText = apple;
+        }
+        )
+        document.getElementById("Clear2").addEventListener('click', () => {
+            banana = 0;
+            document.getElementById('bananaCount').innerText = banana;
+        }
+        )
+        document.getElementById("Clear3").addEventListener('click', () => {
+            mango = 0;
+            document.getElementById('mangoCount').innerText = mango;
+        }
+        )
+        // let countFruits = 0;
+        // let totalCount = 0;
+
+        // function count(e){
+        //     let ids = e.target.id;
+        //     countFruits++;
+        //     totalCount++;
+        //     document.getElementById().innerText = countFruits;
+        // }
+    </script>
+</body>
+
+</html>
